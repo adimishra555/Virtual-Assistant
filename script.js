@@ -24,10 +24,6 @@ function wishMe(){
     }
 }
 
-
-
-
-
 let speechRecognition= window.SpeechRecognition || window.webkitSpeechRecognition 
 let recognition =new speechRecognition()
 recognition.onresult=(event)=>{
@@ -37,14 +33,11 @@ recognition.onresult=(event)=>{
    takeCommand(transcript.toLowerCase())
 }
 
-
-
 btn.addEventListener("click",()=>{
     recognition.start()
     voice.style.display="block"
     btn.style.display="none"
 })
-
 
 function takeCommand(message){
    voice.style.display="none"
